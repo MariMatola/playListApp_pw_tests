@@ -33,8 +33,13 @@ export default defineConfig({
     baseURL: 'https://vite-react-alpha-lemon.vercel.app/',
     trace: 'on-first-retry',
     testIdAttribute: 'id',
+    globalVariables: {  
+      summerBreezeTrack: 'Summer Breeze', 
+      autumnLeavesTrack: 'Autumn Leaves',
+      winterWindsTrack: 'Winter Winds',
+    },
   },
-
+  
   /* Configure projects for major browsers */
   projects: [
     {
@@ -80,4 +85,3 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
