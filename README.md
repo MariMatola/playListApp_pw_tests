@@ -44,3 +44,8 @@ npx playwright test
 ```bash
 npx playwright show-report
 ```
+
+
+# Additional
+
+This task was interesting to me, so I decided to add an extra branch called 'Additional' in case I think of any improvements after submitting the task.
