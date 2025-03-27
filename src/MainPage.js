@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+import { sumTimeInSeconds } from '../helpers/sumTimeInSecondsFunction.js'
 
 export class MainPage {
   constructor(page) {
@@ -64,19 +65,4 @@ export class MainPage {
     await expect(playlistDurationValue).toEqual(totalTime);
   }
 
-}
-
-function sumTimeInSeconds(times) {
-  let totalMinutes = 0;
-  let totalSeconds = 0;
-
-  times.forEach(time => {
-    const [minutes, seconds] = time.split(':').map(Number); 
-    totalMinutes += minutes;
-    totalSeconds += seconds;
-  });
-
-  totalSeconds += totalMinutes*60;
-
-  return `${totalSeconds}`;
 }
