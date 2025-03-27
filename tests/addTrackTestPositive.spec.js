@@ -1,36 +1,17 @@
 import { test } from '@playwright/test';
 import { MainPage } from '../src/MainPage';
+import { selectSongs, randomInteger } from '../helpers/selectSongFunction.js'
 
 test('The user is able to find correct track using the search field', async ({ page }) => {
   const mainPage = new MainPage(page);
-
-  const SummerBreatheTrach = 'Summer Breeze';
-  const autumnLeavesTrack = 'Autumn Leaves';
-  const winterWindsTrack = 'Winter Winds';
-  const springDanceTrack = 'Spring Dance';
-  const rainyMoodTrack = 'Rainy Mood';
-
+  // select one random song
+  // define random song name
+  const randomTrack = await selectSongs(page, 1);
+  
   await mainPage.open();
 
-  // add Summer Breeze track 
-  await mainPage.clickPlusButton(SummerBreatheTrach);
-  await mainPage.assertTrackIsVisibleInPlaylist(SummerBreatheTrach);
-
-  // add Autumn Leaves track
-  await mainPage.clickPlusButton(autumnLeavesTrack);
-  await mainPage.assertTrackIsVisibleInPlaylist(autumnLeavesTrack);
+  await mainPage.clickPlusButton(randomTrack);
+  await mainPage.assertTrackIsVisibleInPlaylist(randomTrack);
   
-  // add Winter Winds track
-  await mainPage.clickPlusButton(winterWindsTrack);
-  await mainPage.assertTrackIsVisibleInPlaylist(winterWindsTrack);
-  
-  // add Spring Dance track
-  await mainPage.clickPlusButton(springDanceTrack);
-  await mainPage.assertTrackIsVisibleInPlaylist(springDanceTrack);
-  
-  // add Rainy Mood track
-  await mainPage.clickPlusButton(rainyMoodTrack);
-  await mainPage.assertTrackIsVisibleInPlaylist(rainyMoodTrack);
-
 });
 

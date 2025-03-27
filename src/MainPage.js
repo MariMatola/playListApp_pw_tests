@@ -21,6 +21,18 @@ export class MainPage {
     await this.searchField.fill(trackName);
   }
 
+  async getSongNamesList() {
+    const songCount = await this.tracklisItem.count();
+    return await Promise.all(
+      [...Array(songCount)].map(async (_, i) => {
+        return await this.tracklisItem.nth(i)
+          .locator('div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-4.css-1udb513')
+          .locator('p')
+          .textContent();
+      })
+    );
+  }
+
   async clickPlusButton(trackName) {
     const specificTrackListItem = this.tracklisItem.filter({ hasText: new RegExp(trackName) });
     const plusButtonLocator = specificTrackListItem.locator('button', { hasText: '+' });
