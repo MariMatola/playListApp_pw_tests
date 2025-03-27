@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { MainPage } from '../src/MainPage';
-import { selectSongs, randomInteger } from '../helpers/selectSongFunction.js'
+import { selectSongs, randomInteger } from '../helpers/selectSongFunction'
 
 test('The user is able to find correct track using the search field', async ({ page }) => {
   const mainPage = new MainPage(page);
@@ -12,6 +12,6 @@ test('The user is able to find correct track using the search field', async ({ p
 
   await mainPage.clickPlusButton(randomTrack);
   await mainPage.assertTrackIsVisibleInPlaylist(randomTrack);
-  
+
 });
 
