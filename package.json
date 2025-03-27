@@ -1,0 +1,22 @@
+{
+  "name": "playlistapp_pw_tests",
+  "version": "1.0.0",
+  "description": "This project implements test coverage for the Playlist App functionality using Playwright.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariMatola/playListApp_pw_tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariMatola/playListApp_pw_tests/issues"
+  },
+  "homepage": "https://github.com/MariMatola/playListApp_pw_tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.14"
+  }
+}
