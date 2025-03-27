@@ -60,8 +60,8 @@ export class MainPage {
 
     const totalTime = await sumTimeInSeconds(timeArray);
     
-    const playListValue = await this.playlistDuration.textContent();
-    await expect(playListValue).toEqual(totalTime);
+    const playlistDurationValue = await this.playlistDuration.textContent();
+    await expect(playlistDurationValue).toEqual(totalTime);
   }
 
 }
