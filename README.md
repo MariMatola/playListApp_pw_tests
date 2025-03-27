@@ -2,7 +2,7 @@
 
 This project implements test coverage for the Playlist App functionality using Playwright. 
 
-#Tech Stack:
+# Tech Stack:
 
 - **Testing Framework:** Playwright
 - **Language:** JavaScript
