@@ -1,7 +1,12 @@
 # playListApp_pw_tests
-Playwright tests for Playlist App
 
 This project implements test coverage for the Playlist App functionality using Playwright. 
+
+#Tech Stack:
+
+- **Testing Framework:** Playwright
+- **Language:** JavaScript
+- **Test Coverage:** Functional UI testing for the app’s core features
 
 # Test coverage
 
