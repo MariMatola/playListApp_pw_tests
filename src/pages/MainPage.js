@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-import { sumTimeInSeconds } from '../helpers/sumTimeInSecondsFunction.js'
+import { sumTimeInSeconds } from '../helpers/sumTimeInSecondsFunction'
 
 export class MainPage {
   constructor(page) {

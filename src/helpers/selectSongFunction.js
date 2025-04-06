@@ -1,4 +1,4 @@
-import { MainPage } from '../src/MainPage';
+import { MainPage } from '../pages/MainPage';
 
 async function getSonglist(page) {
   const mainPage = new MainPage(page);

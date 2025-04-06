@@ -1,21 +1,22 @@
 import { test } from '@playwright/test';
-import { MainPage } from '../src/MainPage';
+import { MainPage } from '../src/pages/MainPage';
+require ('dotenv').config();
 
 test('The correct total playlist tracks duration is displayed after adding the tracks to the playlist', async ({ page }) => {
   const mainPage = new MainPage(page);
-  const summerBreatheTrach = 'Summer Breeze';
-  const autumnLeavesTrack = 'Autumn Leaves';
-  const winterWindsTrack = 'Winter Winds';
-
   await mainPage.open();
 
 
   // add tracks to the playlist
-  await mainPage.clickPlusButton(summerBreatheTrach);
-  await mainPage.clickPlusButton(autumnLeavesTrack);
-  await mainPage.clickPlusButton(winterWindsTrack);
+  await mainPage.clickPlusButton(process.env.SummerBreatheTrack);
+  await mainPage.clickPlusButton(process.env.AutumnLeavesTrack);
+  await mainPage.clickPlusButton(process.env.WinterWindsTrack);
   await mainPage.assertPlaylistDurationIsVisible();
-  await mainPage.assertCorrectPlaylistDuration(summerBreatheTrach, autumnLeavesTrack, winterWindsTrack);
+  await mainPage.assertCorrectPlaylistDuration(
+    process.env.SummerBreatheTrack, 
+    process.env.AutumnLeavesTrack, 
+    process.env.WinterWindsTrack,
+  );
   
 });
 

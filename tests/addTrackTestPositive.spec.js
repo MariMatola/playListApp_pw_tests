@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { MainPage } from '../src/MainPage';
-import { selectSongs, randomInteger } from '../helpers/selectSongFunction'
+import { MainPage } from '../src/pages/MainPage';
+import { selectSongs } from '../src/helpers/selectSongFunction'
 
 test('The user is able to find correct track using the search field', async ({ page }) => {
   const mainPage = new MainPage(page);
